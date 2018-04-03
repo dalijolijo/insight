@@ -17,10 +17,16 @@ export class TransactionComponent {
 
   private COIN: number = 100000000;
 
-  public expanded: boolean = false;
+  public expanded: boolean = true;
   @Input() public tx: any = {};
 
   constructor(private navCtrl: NavController, public currency: CurrencyProvider) {
+  }
+
+  public showProofofexistence(asm: any): string {
+    if (asm.includes('OP_RETURN 444f4350524f4f46')) {
+      return 'Proof of Existence ' + asm.substring(26);
+    }
   }
 
   public getAddress(vout: any): string {
