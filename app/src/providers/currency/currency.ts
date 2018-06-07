@@ -22,7 +22,7 @@ export class CurrencyProvider {
 
   constructor(public http: Http, private api: ApiProvider) {
     // TODO Make this an API call
-    this.defaultCurrency = 'BTC';
+    this.defaultCurrency = 'ETH';
     this.currencySymbol = this.defaultCurrency;
 
     let url: string = this.api.apiPrefix + 'explorers';
