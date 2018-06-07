@@ -1,7 +1,7 @@
 {
   "name": "insight-ui",
   "description": "A bitcoin block explorer and API.",
-  "version": "1.0.0",
+  "version": "8.0.0",
   "repository": "git://github.com/bitpay/insight.git",
   "bugs": {
     "url": "https://github.com/bitpay/insight/issues"
@@ -19,16 +19,15 @@
   ],
   "bitcoreNode": "bitcore-node",
   "scripts": {
-    "postinstall": "run-s install-app",
-    "install-app": "cd app && npm install",
-    "start": "run-s watch-app",
-    "watch-app": "cd app && npm start",
+    "postinstall": "cd app && npm install",
+    "start": "cd app && npm start",
     "test": "cd app && ng test --code-coverage",
     "test:ci": "cd app && npm run test:ci"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bitcore-lib": "^8.0.0"
+  },
   "devDependencies": {
-    "@angular/cli": "^1.7.3",
-    "npm-run-all": "^4.0.2"
+    "@angular/cli": "^1.7.3"
   }
 }
